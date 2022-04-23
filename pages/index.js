@@ -23,7 +23,7 @@ const Home = ({ products, bannerData }) => {
   )
 }
 
-export const getStaticProps = async ({ params: { slug } }) => {
+export const getServerSideProps = async () => {
   const query = `*[_type == "product"]`
   const products = await client.fetch(query)
 
