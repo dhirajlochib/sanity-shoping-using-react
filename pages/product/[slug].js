@@ -15,7 +15,7 @@ const ProductDetails = ({ products, product }) => {
                         <img src={urlFor(image && image[index])} className="product-detail-image" />
                     </div>
                     <div className='small-images-container'>
-                        {image.map((item, i) => <img src={urlFor(item)} className={i === index ? 'small-image selected-image' : 'small-image'} onMouseEnter={() => setIndex(i)} />)}
+                        {image.map((item, i) => <img src={urlFor(item)} key={i} className={i === index ? 'small-image selected-image' : 'small-image'} onMouseEnter={() => setIndex(i)} />)}
                     </div>
 
                 </div>
@@ -58,7 +58,7 @@ const ProductDetails = ({ products, product }) => {
                 </h2>
                 <div className='marquee'>
                     <div className='maylike-products-container track'>
-                        {products.map((item) => <Product key={item._id} product={item} />)}
+                        {products.map((item, i) => <Product key={i} product={item} />)}
                     </div>
                 </div>
             </div>
