@@ -7,7 +7,7 @@ const Navbar = () => {
    return (
       <div className="navbar-container">
          <p>
-            <Link href="/"> DB Services Headphones</Link>
+            <Link href="/"> Dugu Store Headphones</Link>
          </p>
          <button type="button" className="cart-icon" onClick="">
             <AiOutlineShopping />
